@@ -14,7 +14,7 @@ with DAG(
     # 분, 시 , 월, 요일, 언제 
     schedule="0 0 * * *",
     # dag가 시작되는 시간 (UTC 말고 한국시간) , 누락된 구간을 돌리지 않음 (catchup=False)
-    start_date=pendulum.datetime(2023 3, 1, tz="Asia/Seoul"),
+    start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
     catchup=False,
     # 타임아웃 설정
     # dagrun_timeout=datetime.timedelta(minutes=60),
@@ -27,7 +27,7 @@ with DAG(
     )
     
     bash_t2 = BashOperator(
-        task_id="bash_t2",
+        task_id="bash_t2"ㅇ
         bash_command="echo $HOSTNAME",
     )
     
