@@ -1,11 +1,12 @@
-#!/bin/sh
-FRUIT = $1
+TRAFFFIC = $1
 
-if [ "$FRUIT" = "prod" ]; then
-    nohup python3 main.py --env=prod 1>/prod/null 2>&1 &
-elif [ "$FRUIT" = "stg" ]; then
-    nohup python3 main.py --env=stg 1>/stg/null 2>&1 &
+if [ "$TRAFFFIC" = "rtm" ]; then
+    echo "Starting traffic for rtm"
+elif [ "$TRAFFFIC" = "rtti" ]; then
+    echo "Starting traffic for rtti"
+elif [ "$TRAFFFIC" = "pattern" ]; then
+    echo "Starting traffic for pattern"
 else
-    nohup python3 main.py --env=dev 1>/dev/null 2>&1 &
+    echo "Invalid traffic type. Please provide valid traffic type."
 fi
 
