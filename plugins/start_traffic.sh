@@ -1,11 +1,12 @@
-TRAFFFIC = $1
+#!/bin/sh
+TRAFFFIC=$1
 
 if [ "$TRAFFFIC" = "rtm" ]; then
-    echo "Starting traffic for rtm"
+    echo "Titans rtm data api batch started "
 elif [ "$TRAFFFIC" = "rtti" ]; then
-    echo "Starting traffic for rtti"
+    echo "Titans rtti data api batch started "
 elif [ "$TRAFFFIC" = "pattern" ]; then
-    echo "Starting traffic for pattern"
+    echo " Titans pattern data api batch started "
 else
     echo "Invalid traffic type. Please provide valid traffic type."
 fi
