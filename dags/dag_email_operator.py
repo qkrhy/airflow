@@ -14,7 +14,6 @@ with DAG(
         task_id='send_email_task',
         # 받는 사람 + 참조
         to='qkrhy@mqnic.com',
-        cc='hyo8545@naver.com',
         # 이메일 제목 
         subject='Airflow 성공메일',
         html_content='Airflow 작업이 완료되었습니다'
